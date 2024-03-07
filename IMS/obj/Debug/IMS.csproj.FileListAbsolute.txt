@@ -1,0 +1,7 @@
+C:\Users\omchi\source\repos\IMS\IMS\bin\Debug\IMS.dll.config
+C:\Users\omchi\source\repos\IMS\IMS\bin\Debug\IMS.dll
+C:\Users\omchi\source\repos\IMS\IMS\bin\Debug\IMS.pdb
+C:\Users\omchi\source\repos\IMS\IMS\obj\Debug\IMS.csproj.AssemblyReference.cache
+C:\Users\omchi\source\repos\IMS\IMS\obj\Debug\IMS.csproj.CoreCompileInputs.cache
+C:\Users\omchi\source\repos\IMS\IMS\obj\Debug\IMS.dll
+C:\Users\omchi\source\repos\IMS\IMS\obj\Debug\IMS.pdb
