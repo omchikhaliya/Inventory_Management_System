@@ -25,12 +25,12 @@ namespace Client
         {
             PurchasedProductForm form = new PurchasedProductForm();
             form.ShowDialog();
-
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            SoldProductForm form = new SoldProductForm();
+            form.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)

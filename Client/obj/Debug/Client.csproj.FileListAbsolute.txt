@@ -11,3 +11,4 @@ C:\Users\omchi\source\repos\IMS\Client\obj\Debug\Client.csproj.CoreCompileInputs
 C:\Users\omchi\source\repos\IMS\Client\obj\Debug\Client.exe
 C:\Users\omchi\source\repos\IMS\Client\obj\Debug\Client.pdb
 C:\Users\omchi\source\repos\IMS\Client\obj\Debug\Client.PurchasedProductForm.resources
+C:\Users\omchi\source\repos\IMS\Client\obj\Debug\Client.SoldProductForm.resources
