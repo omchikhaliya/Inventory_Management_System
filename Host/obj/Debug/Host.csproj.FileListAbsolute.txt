@@ -1,0 +1,15 @@
+C:\Users\omchi\source\repos\IMS\Host\bin\Debug\Host.exe.config
+C:\Users\omchi\source\repos\IMS\Host\bin\Debug\Host.exe
+C:\Users\omchi\source\repos\IMS\Host\bin\Debug\Host.pdb
+C:\Users\omchi\source\repos\IMS\Host\bin\Debug\IMS.dll
+C:\Users\omchi\source\repos\IMS\Host\bin\Debug\IMS.pdb
+C:\Users\omchi\source\repos\IMS\Host\bin\Debug\IMS.dll.config
+C:\Users\omchi\source\repos\IMS\Host\obj\Debug\Host.csproj.AssemblyReference.cache
+C:\Users\omchi\source\repos\IMS\Host\obj\Debug\Host.csproj.SuggestedBindingRedirects.cache
+C:\Users\omchi\source\repos\IMS\Host\obj\Debug\Host.Form1.resources
+C:\Users\omchi\source\repos\IMS\Host\obj\Debug\Host.Properties.Resources.resources
+C:\Users\omchi\source\repos\IMS\Host\obj\Debug\Host.csproj.GenerateResource.cache
+C:\Users\omchi\source\repos\IMS\Host\obj\Debug\Host.csproj.CoreCompileInputs.cache
+C:\Users\omchi\source\repos\IMS\Host\obj\Debug\Host.csproj.CopyComplete
+C:\Users\omchi\source\repos\IMS\Host\obj\Debug\Host.exe
+C:\Users\omchi\source\repos\IMS\Host\obj\Debug\Host.pdb
