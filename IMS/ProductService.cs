@@ -77,7 +77,7 @@ namespace IMS
                         // Add parameters to prevent SQL injection
                         command.Parameters.AddWithValue("@id", p.ProductId);
                         command.Parameters.AddWithValue("@name", p.ProductName);
-                        command.Parameters.AddWithValue("@description", p.ProductName);
+                        command.Parameters.AddWithValue("@description", p.ProductDescription);
                         command.Parameters.AddWithValue("@price", p.ProductPrice);
                         command.Parameters.AddWithValue("@quantity", p.ProductQuantity);
 
@@ -140,6 +140,45 @@ namespace IMS
             }
 
             return resultMessage;
+        }
+        Product IProductService.GetProductById(int id)
+        {
+            Product product = null;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connection_string))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("SELECT Id, Name, Description, Price, Quantity FROM Products WHERE Id = @id", connection))
+                    {
+                        command.Parameters.AddWithValue("@id", id);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                product = new Product
+                                {
+                                    ProductId = reader.GetInt32(0),
+                                    ProductName = reader.GetString(1),
+                                    ProductDescription = reader.GetString(2),
+                                    ProductPrice = reader.GetInt32(3),
+                                    ProductQuantity = reader.GetInt32(4)
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception (log or rethrow)
+                Console.WriteLine($"Error retrieving product information: {ex.Message}");
+            }
+
+            return product;
         }
 
         string IProductService.PurchaseProduct(int id, int quantity)
@@ -218,7 +257,6 @@ namespace IMS
             return resultMessage;
         }
 
-        // Helper function to retrieve product information by ID
         private Product GetProductById(int id)
         {
             Product product = null;
@@ -229,7 +267,7 @@ namespace IMS
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand("SELECT Id, Name, Price, Quantity FROM Products WHERE Id = @id", connection))
+                    using (SqlCommand command = new SqlCommand("SELECT Id, Name, Description, Price, Quantity FROM Products WHERE Id = @id", connection))
                     {
                         command.Parameters.AddWithValue("@id", id);
 
@@ -241,8 +279,9 @@ namespace IMS
                                 {
                                     ProductId = reader.GetInt32(0),
                                     ProductName = reader.GetString(1),
-                                    ProductPrice = reader.GetInt32(2),
-                                    ProductQuantity = reader.GetInt32(3)
+                                    ProductDescription = reader.GetString(2),
+                                    ProductPrice = reader.GetInt32(3),
+                                    ProductQuantity = reader.GetInt32(4)
                                 };
                             }
                         }
@@ -257,6 +296,9 @@ namespace IMS
 
             return product;
         }
+
+        // Helper function to retrieve product information by ID
+
 
 
         string IProductService.SellProduct(int id, int quantity)

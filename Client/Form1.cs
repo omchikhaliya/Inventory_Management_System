@@ -16,6 +16,10 @@ namespace Client
         {
             InitializeComponent();
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 form = new Form2();
@@ -33,9 +37,29 @@ namespace Client
             form.ShowDialog();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PurchasedProduct form = new PurchasedProduct();
+            form.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SellProduct form = new SellProduct();
+            form.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            UpdateProductForm form = new UpdateProductForm();
+            form.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DeleteProductForm form = new DeleteProductForm();
+            form.ShowDialog();
         }
     }
 }

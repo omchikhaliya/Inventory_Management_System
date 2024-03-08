@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="4e2fb119-880f-47c3-869c-1038e581f033" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="928601ea-5eea-4721-aa3e-b02b936fc803" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="218a8929-3cb0-4f64-96cb-b15774c3f5d5" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="88bdd31a-7e5a-47be-9d4c-62df6c54f67d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="afe18231-e19b-4c83-bee4-95c18200419f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" />
-    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="b118f061-92d9-4507-9f07-fa639581bf32" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" />
-    <MetadataFile FileName="IMS.xsd" MetadataType="Schema" ID="3c6dbc6f-277d-408b-b56d-d25b04ae9cf4" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="2d349206-cfa1-4eda-8c35-b409f8a8aace" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="546a4aa7-32db-4e7f-b1a2-0d18dba31388" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="90069431-8884-4b71-97e5-dddbc306918d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="68d648b0-4e28-4f93-b939-c93df07042c3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" />
+    <MetadataFile FileName="IMS.xsd" MetadataType="Schema" ID="89b7b133-91ef-427b-8dc3-14a7fb81d386" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IMS/ProductService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

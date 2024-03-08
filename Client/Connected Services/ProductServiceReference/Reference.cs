@@ -132,6 +132,12 @@ namespace Client.ProductServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProducts", ReplyAction="http://tempuri.org/IProductService/GetProductsResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetProductsAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProductById", ReplyAction="http://tempuri.org/IProductService/GetProductByIdResponse")]
+        Client.ProductServiceReference.Product GetProductById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProductById", ReplyAction="http://tempuri.org/IProductService/GetProductByIdResponse")]
+        System.Threading.Tasks.Task<Client.ProductServiceReference.Product> GetProductByIdAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/AddProduct", ReplyAction="http://tempuri.org/IProductService/AddProductResponse")]
         string AddProduct(Client.ProductServiceReference.Product p);
         
@@ -208,6 +214,14 @@ namespace Client.ProductServiceReference {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> GetProductsAsync() {
             return base.Channel.GetProductsAsync();
+        }
+        
+        public Client.ProductServiceReference.Product GetProductById(int id) {
+            return base.Channel.GetProductById(id);
+        }
+        
+        public System.Threading.Tasks.Task<Client.ProductServiceReference.Product> GetProductByIdAsync(int id) {
+            return base.Channel.GetProductByIdAsync(id);
         }
         
         public string AddProduct(Client.ProductServiceReference.Product p) {

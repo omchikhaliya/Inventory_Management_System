@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class Form2 : Form
+    public partial class DeleteProductForm : Form
     {
-        public Form2()
+        private int id;
+        public DeleteProductForm()
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
+        private void DeleteProductForm_Load(object sender, EventArgs e)
         {
             try
             {
@@ -34,7 +29,11 @@ namespace Client
                 if (ds != null && ds.Tables.Count > 0)
                 {
                     // Assuming you want to display the first table in the DataSet
-                    DisplayDataSet(ds.Tables[0]);
+                    /*DisplayDataSet(ds.Tables[0]);*/
+                    listBox1.DataSource = ds.Tables[0].DefaultView;
+                    listBox1.DisplayMember = "Name";
+                    listBox1.ValueMember = "Id";
+
                 }
                 else
                 {
@@ -47,30 +46,29 @@ namespace Client
             }
         }
 
-        private void DisplayDataSet(DataTable dataTable)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Clear existing rows and columns in the DataGridView
-            dataGridView1.Rows.Clear();
-            dataGridView1.Columns.Clear();
 
-            // Add columns to the DataGridView
-            foreach (DataColumn column in dataTable.Columns)
+        }
+        private void listBox1_Click(object sender, EventArgs e)
+        {
+            id = int.Parse(listBox1.SelectedValue.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
             {
-                dataGridView1.Columns.Add(column.ColumnName, column.ColumnName);
-            }
-
-            // Add rows from the DataTable to the DataGridView
-            foreach (DataRow row in dataTable.Rows)
-            {
-                // Add a new row to the DataGridView
-                int rowIndex = dataGridView1.Rows.Add();
-
-                // Set values for each cell in the DataGridView
-                for (int columnIndex = 0; columnIndex < dataGridView1.Columns.Count; columnIndex++)
+                Client.ProductServiceReference.ProductServiceClient proxy = new Client.ProductServiceReference.ProductServiceClient("BasicHttpBinding_IProductService");
+                string result = proxy.DeleteProduct(id);
+                if (result != null)
                 {
-                    dataGridView1.Rows[rowIndex].Cells[columnIndex].Value = row[columnIndex];
+                    MessageBox.Show(result);
                 }
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMS", "IMS\IMS.csproj", "{19AAF261-7DD8-4ADE-B763-C800E8A981C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{45A8BA3A-33AE-4AE5-A0C7-A1026602AC5A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{19AAF261-7DD8-4ADE-B763-C800E8A981C6} = {19AAF261-7DD8-4ADE-B763-C800E8A981C6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{EFD64E60-3299-46C2-9EF6-93C1286FAF21}"
 	ProjectSection(ProjectDependencies) = postProject

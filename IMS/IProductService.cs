@@ -15,6 +15,9 @@ namespace IMS
         DataSet GetProducts();
 
         [OperationContract]
+        Product GetProductById(int id);
+
+        [OperationContract]
         string AddProduct(Product p);
 
         [OperationContract]
